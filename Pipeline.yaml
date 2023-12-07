@@ -36,11 +36,11 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
-  - name: test-UI
-    runAfter: [git-clone]
+  - name: test-ui
+    #runAfter: [git-clone]
     taskRef:
       name: run-unit-tests
-      kind: ask
+      kind: Task
     workspaces:
     - name: source
       workspace: shared-workspace
