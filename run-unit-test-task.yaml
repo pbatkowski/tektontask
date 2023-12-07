@@ -4,7 +4,7 @@ metadata:
   name: run-unit-tests
 spec:
   steps:
-    - name: run-unit-tests
+    - name: run-unit-test
       image: python:3.11
       workingDir: /workspace
       command: python -m unittest test_functions.py
