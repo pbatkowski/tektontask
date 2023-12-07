@@ -14,4 +14,4 @@ spec:
     - name: runit
       image: python:3.11
       workingDir: /workspace/source
-      command: python -m unittest test_functions.py
+      command: ["python -m unittest test_functions.py"]
