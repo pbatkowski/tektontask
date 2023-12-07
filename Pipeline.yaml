@@ -40,7 +40,7 @@ spec:
     runAfter: 
     - fetch-repository
     taskRef:
-      name: rununittests
+      name: pytest
       kind: Task
     params:
     - name: PYTHON
@@ -49,7 +49,7 @@ spec:
       value: requirements.txt 
     workspaces:
     - name: source
-      workspace: shared-workspace  
+      workspace: shared-workspace   
   - name: build-image
     taskRef:
       name: buildah
