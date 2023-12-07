@@ -1,10 +1,10 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: run-unit-tests
+  name: rununittests
 spec:
   steps:
-    - name: run-unit-test
+    - name: rununittest
       image: python:3.11
       workingDir: /workspace
       command: python -m unittest test_functions.py
