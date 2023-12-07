@@ -40,7 +40,7 @@ spec:
     runAfter: [git-clone]
     taskRef:
       name: run-unit-tests
-      kind: ClusterTask
+      kind: ask
     workspaces:
     - name: source
       workspace: shared-workspace
