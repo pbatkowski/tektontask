@@ -36,7 +36,7 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
-  - name: unit-test
+  - name: unittest
     runAfter: 
     - fetch-repository
     taskRef:
