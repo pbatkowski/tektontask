@@ -15,7 +15,3 @@ spec:
       image: python:3.11
       workingDir: /workspace/source
       command: python -m unittest test_functions.py
-      args:
-        - |-
-          echo Running unit tests defined in test_functions.py
-          echo -----------------------------------
