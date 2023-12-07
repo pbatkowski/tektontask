@@ -3,10 +3,17 @@ kind: Task
 metadata:
   name: rununittests
 spec:
+  workspaces:
+  - name: source
+  params:
+    - name: manifest_dir
+      description: The directory in source that contains yaml manifests
+      type: string
+      default: "k8s"
   steps:
-    - name: rununittest
+    - name: runit
       image: python:3.11
-      workingDir: /workspace
+      workingDir: /workspace/source
       command: python -m unittest test_functions.py
       args:
         - |-
