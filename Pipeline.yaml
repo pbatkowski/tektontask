@@ -36,6 +36,19 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
+  - name: test-UI
+    runAfter: [git-clone]
+    taskRef:
+      name: run-unit-tests
+      kind: Task
+    workspaces:
+    - name: source
+      workspace: shared-workspace
+    params:
+      - name: PYTHON
+        value: "3.11"
+      - name: REQUIREMENTS_FILE
+        value: requirements.txt
   - name: build-image
     taskRef:
       name: buildah
