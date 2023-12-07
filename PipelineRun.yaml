@@ -8,7 +8,7 @@ spec:
     name: build-and-deploy
   params:
   - name: git-url
-    value: "git@github.com:saurav116/pipelines-vote-api.git"
+    value: "git@github.com:pbatkowski/pipelines-vote-api.git"
   - name: IMAGE
     value: "image-registry.openshift-image-registry.svc:5000/$(context.pipelineRun.namespace)/pipelines-vote-api"
   - name: deployment-name
