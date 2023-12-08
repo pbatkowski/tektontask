@@ -40,7 +40,7 @@ spec:
     runAfter: 
     - fetch-repository
     taskRef:
-      name: pytest
+      name: rununittests
       kind: Task
     params:
     - name: PYTHON
