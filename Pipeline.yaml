@@ -48,7 +48,7 @@ spec:
     - name: REQUIREMENTS_FILE
       value: requirements.txt 
     workspaces:
-    - name: .
+    - name: output
       workspace: shared-workspace   
   - name: build-image
     taskRef:
