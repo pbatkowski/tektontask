@@ -62,6 +62,8 @@ spec:
       workspace: shared-workspace
 #   runAfter:
 #    - unittest
+   runAfter:
+    - fetch-repository
   - name: apply-manifests
     taskRef:
       name: apply-manifests
