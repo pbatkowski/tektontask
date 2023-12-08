@@ -44,11 +44,12 @@ spec:
       kind: Task
     params:
     - name: PYTHON
-      value: "3.11.1"
+      value: "3.12"
     - name: REQUIREMENTS_FILE
       value: requirements.txt 
     workspaces:
-    - name: source 
+    - name: source
+      workspace: shared-workspace   
   - name: build-image
     taskRef:
       name: buildah
