@@ -36,20 +36,20 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
-  #- name: unittest
-  #  runAfter: 
-  #  - fetch-repository
-  #  taskRef:
-  #    name: pytest
-  #    kind: Task
-  #  params:
-  #  - name: PYTHON
-  #    value: "3.11.1"
-  #  - name: REQUIREMENTS_FILE
-  #    value: requirements.txt 
-  #  workspaces:
-  #  - name: source
-  #    workspace: shared-workspace   
+#- name: unittest
+#  runAfter: 
+#  - fetch-repository
+#  taskRef:
+#    name: pytest
+#    kind: Task
+#  params:
+#  - name: PYTHON
+#    value: "3.11.1"
+#  - name: REQUIREMENTS_FILE
+#    value: requirements.txt 
+#  workspaces:
+#  - name: source
+#    workspace: shared-workspace   
   - name: build-image
     taskRef:
       name: buildah
