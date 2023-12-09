@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: run-unit-test
+
 spec:
   steps:
   - name: install-dependencies
@@ -12,6 +13,7 @@ spec:
         - -c
         - |
           pip install pytest
+          
   - name: run-python-command
       image: python:3.11
       command:
