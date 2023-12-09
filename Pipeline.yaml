@@ -49,9 +49,9 @@ spec:
 #      value: requirements.txt
 #    - name: SOURCE_PATH
 #      value: "/output"
-    workspaces:
-    - name: source
-      workspace: shared-workspace  
+#    workspaces:
+     - name: source
+       workspace: shared-workspace  
   - name: build-image
     taskRef:
       name: buildah
