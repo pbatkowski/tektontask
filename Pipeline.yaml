@@ -48,7 +48,7 @@ spec:
     - name: REQUIREMENTS_FILE
       value: requirements.txt
     - name: SOURCE_PATH
-      value: "/workspace"
+      value: "/output"
     workspaces:
     - name: source
       workspace: shared-workspace  
