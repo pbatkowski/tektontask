@@ -36,9 +36,17 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
+  - name: list-files
+    runAfter:
+    - fetch-repository
+    taskRef:
+      name: list-files-task
+    workspaces:
+    - name: source
+      workspace: shared-workspace
   - name: unit-test
     runAfter: 
-    - fetch-repository
+    - list-files
     taskRef:
       name: pytest
       kind: Task
