@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: list-files-task
+spec:
+  steps:
+  - name: list-files
+    image: alpine
+    script: |
+      #!/bin/bash
+      ls -alR /workspace
