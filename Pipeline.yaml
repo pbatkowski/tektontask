@@ -43,16 +43,14 @@ spec:
       name: pytest
       kind: Task
     params:
-    - name: PYTHON
+    - name: PYTHON_IMAGE
       value: "3.11.1"
     - name: REQUIREMENTS_FILE
       value: requirements.txt
-    - name: command
-      value: "pytest" 
-    - name: args
-      value: "--collect-only"
     workspaces:
     - name: source
+      persistentVolumeClaim:
+        claimName: my-source
       workspace: shared-workspace  
   - name: build-image
     taskRef:
