@@ -43,7 +43,7 @@ spec:
       name: pytest
       kind: Task
     params:
-    - name: PYTHON_IMAGE
+    - name: PYTHON
       value: "3.11.1"
     - name: REQUIREMENTS_FILE
       value: requirements.txt
