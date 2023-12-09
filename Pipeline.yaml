@@ -41,9 +41,6 @@ spec:
     - fetch-repository
     taskRef:
       name: list-files-task
-    workspaces:
-    - name: source
-      workspace: shared-workspace
   - name: unit-test
     runAfter: 
     - list-files
