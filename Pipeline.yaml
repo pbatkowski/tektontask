@@ -36,7 +36,7 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
-  - name: unittest
+  - name: unit-test
     runAfter: 
     - fetch-repository
     taskRef:
@@ -61,7 +61,7 @@ spec:
     - name: source
       workspace: shared-workspace
     runAfter:
-    - unittest
+    - unit-test
   - name: apply-manifests
     taskRef:
       name: apply-manifests
