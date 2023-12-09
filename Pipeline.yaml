@@ -47,10 +47,10 @@ spec:
       value: "3.11.1"
     - name: REQUIREMENTS_FILE
       value: requirements.txt
+    - name: ARGS
+      value: "--collect-only"
     workspaces:
     - name: source
-      persistentVolumeClaim:
-        claimName: my-source
       workspace: shared-workspace  
   - name: build-image
     taskRef:
