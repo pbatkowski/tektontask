@@ -11,4 +11,4 @@ spec:
       args:
         - -c
         - |
-          python -c "print('Hello, Tekton!')"
+          pip install pytest
