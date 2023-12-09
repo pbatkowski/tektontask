@@ -47,8 +47,8 @@ spec:
       value: "3.11.1"
     - name: REQUIREMENTS_FILE
       value: requirements.txt
-    - name: ARGS
-      value: "--collect-only"
+    - name: SOURCE_PATH
+      value: "/workspace"
     workspaces:
     - name: source
       workspace: shared-workspace  
