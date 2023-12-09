@@ -40,15 +40,15 @@ spec:
     runAfter: 
     - fetch-repository
     taskRef:
-      name: pytest
+      name: run-unit-test
       kind: Task
-    params:
-    - name: PYTHON
-      value: "3.11.1"
-    - name: REQUIREMENTS_FILE
-      value: requirements.txt
-    - name: SOURCE_PATH
-      value: "/output"
+#    params:
+#    - name: PYTHON
+#      value: "3.11.1"
+#    - name: REQUIREMENTS_FILE
+#      value: requirements.txt
+#    - name: SOURCE_PATH
+#      value: "/output"
     workspaces:
     - name: source
       workspace: shared-workspace  

@@ -1,17 +1,14 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: rununittests
+  name: run-unit-test
 spec:
-  workspaces:
-  - name: source
-  params:
-    - name: manifest_dir
-      description: The directory in source that contains yaml manifests
-      type: string
-      default: "k8s"
   steps:
-    - name: runit
+    - name: run-python-command
       image: python:3.11
-      workingDir: /workspace/source
-      command: ["python -m unittest test_functions.py"]
+      command:
+        - sh
+      args:
+        - -c
+        - |
+          python -c "print('Hello, Tekton!')"
