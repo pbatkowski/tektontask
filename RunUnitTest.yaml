@@ -5,10 +5,10 @@ metadata:
 spec:
   steps:          
   - name: run-python-command
-      image: python:3.11
-      command:
-        - sh
-      args:
-        - -c
-        - |
-          python -m pytest test_functions.py
+    image: python:3.11
+    command:
+       - sh
+     args:
+       - -c
+       - |
+         python -m pytest test_functions.py
