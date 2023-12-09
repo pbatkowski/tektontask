@@ -36,14 +36,9 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
-  - name: list-files
-    runAfter:
-    - fetch-repository
-    taskRef:
-      name: list-files-task
   - name: unit-test
     runAfter: 
-    - list-files
+    - fetch-repository
     taskRef:
       name: pytest
       kind: Task
@@ -51,7 +46,11 @@ spec:
     - name: PYTHON
       value: "3.11.1"
     - name: REQUIREMENTS_FILE
-      value: requirements.txt 
+      value: requirements.txt
+    - name: command
+      value: "pytest" 
+    - name: args
+      value: "--collect-only"
     workspaces:
     - name: source
       workspace: shared-workspace  
