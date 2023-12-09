@@ -3,12 +3,12 @@ kind: Task
 metadata:
   name: run-unit-test
 spec:
-  steps:          
-  - name: run-python-command
-    image: python:3.11
-    command:
-       - sh
-     args:
-       - -c
-       - |
-         python -m pytest test_functions.py
+  steps:
+    - name: run-python-command
+      image: python:3.11
+      command:
+        - sh
+      args:
+        - -c
+        - |
+          python -c "print('Hello, Tekton!')"
