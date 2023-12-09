@@ -42,13 +42,6 @@ spec:
     taskRef:
       name: run-unit-test
       kind: Task
-#    params:
-#    - name: PYTHON
-#      value: "3.11.1"
-#    - name: REQUIREMENTS_FILE
-#      value: requirements.txt
-#    - name: SOURCE_PATH
-#      value: "/output" 
   - name: build-image
     taskRef:
       name: buildah
