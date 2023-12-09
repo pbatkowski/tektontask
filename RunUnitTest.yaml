@@ -11,4 +11,4 @@ spec:
       args:
         - -c
         - |
-          python -c "print('Hello, Tekton!')"
+          python -m pytest test_functions.py
