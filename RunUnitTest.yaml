@@ -3,6 +3,9 @@ kind: Task
 metadata:
   name: run-unit-test
 spec:
+  workspaces:
+  - name: source
+    workspace: shared-workspace
   steps:
     - name: run-python-command1
       image: python:3.11
@@ -20,6 +23,3 @@ spec:
         - -c
         - |
           find ./
-  workspaces:
-  - name: source
-    workspace: shared-workspace
