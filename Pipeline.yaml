@@ -15,7 +15,7 @@ spec:
   - name: git-revision
     type: string
     description: revision to be used from repo of the code for deployment
-    default: "pipelines-1.11"
+    default: "master"
   - name: IMAGE
     type: string
     description: image to be built from the code
@@ -36,11 +36,20 @@ spec:
       value: "true"
     - name: revision
       value: $(params.git-revision)
-  - name: unit-test
+  - name: unittest
     runAfter: 
     - fetch-repository
     taskRef:
-      name: run-unit-test
+      name: pytest
+      kind: Task
+    params:
+    - name: PYTHON
+      value: "3.11.1"
+    - name: REQUIREMENTS_FILE
+      value: requirements.txt 
+    workspaces:
+    - name: source
+      workspace: shared-workspace  
   - name: build-image
     taskRef:
       name: buildah
@@ -52,7 +61,7 @@ spec:
     - name: source
       workspace: shared-workspace
     runAfter:
-    - unit-test
+    - unittest
   - name: apply-manifests
     taskRef:
       name: apply-manifests
