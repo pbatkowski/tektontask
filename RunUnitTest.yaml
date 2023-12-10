@@ -19,4 +19,7 @@ spec:
       args:
         - -c
         - |
-          find /   
+          find ./
+    workspaces:
+    - name: source
+      workspace: shared-workspace
