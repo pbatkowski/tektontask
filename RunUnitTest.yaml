@@ -19,4 +19,4 @@ spec:
       args:
         - -c
         - |
-          find /workspace   
+          find /   

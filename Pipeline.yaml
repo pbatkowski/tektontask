@@ -41,6 +41,9 @@ spec:
     - fetch-repository
     taskRef:
       name: run-unit-test
+    workspaces:
+    - name: source
+      workspace: shared-workspace
   - name: build-image
     taskRef:
       name: buildah
