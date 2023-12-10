@@ -20,6 +20,6 @@ spec:
         - -c
         - |
           find ./
-    workspaces:
-    - name: source
-      workspace: shared-workspace
+  workspaces:
+  - name: source
+    workspace: shared-workspace
